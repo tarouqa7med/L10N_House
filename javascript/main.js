@@ -27,7 +27,6 @@ navBtn.addEventListener("click", function () {
 })
 
 window.addEventListener("scroll", function () {
-        console.log(window.scrollY)
         if (window.scrollY >= 15) {
                 nav.classList.add("scrolled");
         } else {
