@@ -71,6 +71,26 @@ body.no-scroll {
   cursor: pointer;
 }
 
+.loadingPage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+  z-index: 99999;
+  transition-duration: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loadingPage.hide {
+  opacity: 0;
+}
+.loadingPage.inactive {
+  display: none !important;
+}
+
 nav.navbar {
   position: fixed;
   top: 0;
@@ -460,6 +480,7 @@ header .container .arrow-down-link img:nth-child(3) {
 
 .AboutUs {
   background-color: white;
+  scroll-margin-top: 100px;
 }
 .AboutUs .container {
   width: 90%;
@@ -517,6 +538,9 @@ header .container .arrow-down-link img:nth-child(3) {
   width: 60%;
 }
 
+.Services {
+  scroll-margin-top: 100px;
+}
 .Services .container {
   max-width: 100%;
 }
@@ -649,6 +673,9 @@ header .container .arrow-down-link img:nth-child(3) {
   width: 60%;
 }
 
+#WhyUs {
+  scroll-margin-top: 100px;
+}
 #WhyUs .container > .title {
   position: relative;
   width: -moz-fit-content;
@@ -766,6 +793,9 @@ header .container .arrow-down-link img:nth-child(3) {
   width: 60%;
 }
 
+.LanguageAndSectorsSection {
+  scroll-margin-top: 100px;
+}
 .LanguageAndSectorsSection > .container {
   max-width: 100%;
 }
@@ -874,6 +904,7 @@ header .container .arrow-down-link img:nth-child(3) {
   background: radial-gradient(rgba(104, 183, 3, 0.7333333333), rgba(48, 93, 0, 0.7333333333)), url("./../../../attachments/contact-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
+  scroll-margin-top: 100px;
 }
 #ContactUs > .container {
   max-width: 95%;

@@ -53,3 +53,15 @@ $(window).scroll(function (event) {
                 }
         });
 })
+
+$loadingPage.ready(function () {
+        
+        setTimeout(() => {
+                $loadingPage.addClass("hide");
+        }, 1000);
+        
+        setTimeout(() => {
+                $loadingPage.addClass("inactive");
+                $("body").removeClass("no-scroll");
+        }, 2000);
+});

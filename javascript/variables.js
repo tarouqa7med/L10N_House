@@ -3,6 +3,7 @@ let servicesArr = [];
 let sectorsArr = [];
 let languagesArr = [];
 
+let $loadingPage = $(".loadingPage");
 let modals = document.querySelectorAll(".Modal");
 let collapseMenu = document.querySelector(".navbar .collapse");
 let nav = document.querySelector("nav.navbar");
