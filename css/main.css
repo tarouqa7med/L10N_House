@@ -275,6 +275,7 @@ header .container .arrow-down-link img:nth-child(3) {
 }
 .AboutUs .container .row .myCol .item {
   width: 95%;
+  margin: auto;
 }
 .AboutUs .container .row .myCol .item p {
   color: #555;
