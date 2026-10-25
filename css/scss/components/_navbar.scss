@@ -1,7 +1,6 @@
 @use "../abstracts/main" as *;
 
 nav.navbar {
-
         @include properities($pos: fixed, $top: 0, $width: 100%, $zIndex: 9999);
 
         &.scrolled {
@@ -11,40 +10,190 @@ nav.navbar {
         }
 
         & .container {
-
                 width: 90%;
 
                 .navbar-brand img {
                         width: 90px;
                 }
 
-                .nav-item {
+                button.navbar-toggler {
+                        &.clicked {
+                                border: 2px solid $firstColor;
+                        }
+                        &:focus {
+                                box-shadow: none;
+                        }
+                        &:disabled {
+                                cursor: pointer;
+                        }
+                }
 
-                        .nav-link {
-        
-                                padding: 0;
-                                color: $firstColor;
-                                font-weight: 600;
-                                font-size: 16px;
-                                position: relative;
-        
-                                &::before {
-                                        @include afterElement($btm: -6px, $bg-color: $secondColor);
+                .collapse {
+                        .nav-item {
+                                .nav-link {
+                                        padding: 0;
+                                        color: $firstColor;
+                                        font-weight: 600;
+                                        font-size: 16px;
+                                        position: relative;
+                
+                                        &::before {
+                                                @include afterElement($btm: -6px, $bg-color: $secondColor);
+                                        }
+                                        &.active::before {
+                                                @include afterElement($btm: -6px, $width: 100%, $bg-color: $secondColor);
+                                        }
+                                        &:hover::before {
+                                                @include afterElement($btm: -6px, $width: 100%, $bg-color: $secondColor);
+                                        }
                                 }
-                                &.active::before {
-                                        @include afterElement($btm: -6px, $width: 100%, $bg-color: $secondColor);
-                                }
-                                &:hover::before {
-                                        @include afterElement($btm: -6px, $width: 100%, $bg-color: $secondColor);
-        
+
+                                .dropdown-menu {
+                                        transform: translateX(-50%);
+                                        .dropdown-item {
+                                                font-size: 16px;
+                                        }
                                 }
                         }
 
-                        .dropdown-menu {
-                                transform: translateX(-50%);
+                        @include responsive(850) {
 
-                                .dropdown-item {
-                                        font-size: 16px;
+                                @include properities($pos: absolute, $top: 90px, $left:50%, $x: -50%, $width: 90%, $bgColor: white, $br: 10px);
+                                display: block;
+                                max-height: 0;
+                                overflow: hidden;
+                                padding: 0 50px;
+                                box-shadow: 0 10px 25px #00000080;
+                                transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+
+                                &.open {
+                                        max-height: 450px;
+                                        padding: 10px 50px;
+                                }
+
+                                ul {
+                                        width: 100%;
+                                        li {
+                                                margin-bottom: 15px;
+                                                text-align: center;
+                                                
+                                                &:last-child {
+                                                        margin-bottom: 0;
+                                                        
+                                                        .dropdown-menu {
+                                                                transform: translateX(0%) translateY(5px) !important;
+
+                                                                a {
+                                                                        padding: 0 !important;
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+
+                        @include responsive(650) {
+                                @include properities($pos: absolute, $top: 90px, $left:50%, $x: -50%, $width: 90%, $bgColor: white, $br: 10px);
+                                display: block;
+                                max-height: 0;
+                                overflow: hidden;
+                                padding: 0 50px;
+                                box-shadow: 0 10px 25px #00000080;
+                                transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+
+                                &.open {
+                                        max-height: 450px;
+                                        padding: 10px 50px;
+                                }
+
+                                ul {
+                                        width: 100%;
+                                        li {
+                                                margin-bottom: 15px;
+                                                text-align: center;
+                                                
+                                                &:last-child {
+                                                        margin-bottom: 0;
+
+                                                        .dropdown-menu {
+                                                                transform: translateX(0%) translateY(5px) !important;
+
+                                                                a {
+                                                                        padding: 0 !important;
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+
+                        @include responsive(450) {
+                                @include properities($pos: absolute, $top: 90px, $left:50%, $x: -50%, $width: 90%, $bgColor: white, $br: 10px);
+                                display: block;
+                                max-height: 0;
+                                overflow: hidden;
+                                padding: 0 35px;
+                                box-shadow: 0 10px 25px #00000080;
+                                transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+
+                                &.open {
+                                        max-height: 450px;
+                                        padding: 10px 35px;
+                                }
+
+                                ul {
+                                        width: 100%;
+                                        li {
+                                                margin-bottom: 15px;
+                                                text-align: center;
+                                                
+                                                &:last-child {
+                                                        margin-bottom: 0;
+
+                                                        .dropdown-menu {
+                                                                transform: translateX(0%) translateY(5px) !important;
+
+                                                                a {
+                                                                        padding: 0 !important;
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+
+                        @include responsive(250) {
+                                @include properities($pos: absolute, $top: 90px, $left:50%, $x: -50%, $width: 90%, $bgColor: white, $br: 10px);
+                                display: block;
+                                max-height: 0;
+                                overflow: hidden;
+                                padding: 0 35px;
+                                box-shadow: 0 10px 25px #00000080;
+                                transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+
+                                &.open {
+                                        max-height: 450px;
+                                        padding: 10px 35px;
+                                }
+
+                                ul {
+                                        width: 100%;
+                                        li {
+                                                margin-bottom: 15px;
+                                                text-align: center;
+                                                
+                                                &:last-child {
+                                                        margin-bottom: 0;
+
+                                                        .dropdown-menu {
+                                                                transform: translateX(0%) translateY(5px) !important;
+
+                                                                a {
+                                                                        padding: 0 !important;
+                                                                }
+                                                        }
+                                                }
+                                        }
                                 }
                         }
                 }

@@ -16,3 +16,12 @@ modals.forEach(function (modal) {
                 event.stopPropagation();
         })
 })
+
+navBtn.addEventListener("click", function () {
+        navBtn.classList.toggle("clicked");
+        collapseMenu.classList.toggle("open");
+        navBtn.disabled = true;
+        setTimeout(() => {
+                navBtn.disabled = false;
+        }, 500);
+})

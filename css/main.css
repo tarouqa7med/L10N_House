@@ -86,14 +86,23 @@ nav.navbar .container {
 nav.navbar .container .navbar-brand img {
   width: 90px;
 }
-nav.navbar .container .nav-item .nav-link {
+nav.navbar .container button.navbar-toggler.clicked {
+  border: 2px solid #709F3D;
+}
+nav.navbar .container button.navbar-toggler:focus {
+  box-shadow: none;
+}
+nav.navbar .container button.navbar-toggler:disabled {
+  cursor: pointer;
+}
+nav.navbar .container .collapse .nav-item .nav-link {
   padding: 0;
   color: #709F3D;
   font-weight: 600;
   font-size: 16px;
   position: relative;
 }
-nav.navbar .container .nav-item .nav-link::before {
+nav.navbar .container .collapse .nav-item .nav-link::before {
   content: "";
   position: absolute;
   bottom: -6px;
@@ -104,7 +113,7 @@ nav.navbar .container .nav-item .nav-link::before {
   background-color: #EE5E00;
   transition-duration: 500ms;
 }
-nav.navbar .container .nav-item .nav-link.active::before {
+nav.navbar .container .collapse .nav-item .nav-link.active::before {
   content: "";
   position: absolute;
   bottom: -6px;
@@ -115,7 +124,7 @@ nav.navbar .container .nav-item .nav-link.active::before {
   background-color: #EE5E00;
   transition-duration: 500ms;
 }
-nav.navbar .container .nav-item .nav-link:hover::before {
+nav.navbar .container .collapse .nav-item .nav-link:hover::before {
   content: "";
   position: absolute;
   bottom: -6px;
@@ -126,11 +135,159 @@ nav.navbar .container .nav-item .nav-link:hover::before {
   background-color: #EE5E00;
   transition-duration: 500ms;
 }
-nav.navbar .container .nav-item .dropdown-menu {
+nav.navbar .container .collapse .nav-item .dropdown-menu {
   transform: translateX(-50%);
 }
-nav.navbar .container .nav-item .dropdown-menu .dropdown-item {
+nav.navbar .container .collapse .nav-item .dropdown-menu .dropdown-item {
   font-size: 16px;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  nav.navbar .container .collapse {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    width: 90%;
+    background: white;
+    border-radius: 10px;
+    transform: translateX(-50%) translateY(0);
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 50px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5019607843);
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+  }
+  nav.navbar .container .collapse.open {
+    max-height: 450px;
+    padding: 10px 50px;
+  }
+  nav.navbar .container .collapse ul {
+    width: 100%;
+  }
+  nav.navbar .container .collapse ul li {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  nav.navbar .container .collapse ul li:last-child {
+    margin-bottom: 0;
+  }
+  nav.navbar .container .collapse ul li:last-child .dropdown-menu {
+    transform: translateX(0%) translateY(5px) !important;
+  }
+  nav.navbar .container .collapse ul li:last-child .dropdown-menu a {
+    padding: 0 !important;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  nav.navbar .container .collapse {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    width: 90%;
+    background: white;
+    border-radius: 10px;
+    transform: translateX(-50%) translateY(0);
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 50px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5019607843);
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+  }
+  nav.navbar .container .collapse.open {
+    max-height: 450px;
+    padding: 10px 50px;
+  }
+  nav.navbar .container .collapse ul {
+    width: 100%;
+  }
+  nav.navbar .container .collapse ul li {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  nav.navbar .container .collapse ul li:last-child {
+    margin-bottom: 0;
+  }
+  nav.navbar .container .collapse ul li:last-child .dropdown-menu {
+    transform: translateX(0%) translateY(5px) !important;
+  }
+  nav.navbar .container .collapse ul li:last-child .dropdown-menu a {
+    padding: 0 !important;
+  }
+}
+@media screen and (min-width: 371px) and (max-width: 575.98px) {
+  nav.navbar .container .collapse {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    width: 90%;
+    background: white;
+    border-radius: 10px;
+    transform: translateX(-50%) translateY(0);
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 35px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5019607843);
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+  }
+  nav.navbar .container .collapse.open {
+    max-height: 450px;
+    padding: 10px 35px;
+  }
+  nav.navbar .container .collapse ul {
+    width: 100%;
+  }
+  nav.navbar .container .collapse ul li {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  nav.navbar .container .collapse ul li:last-child {
+    margin-bottom: 0;
+  }
+  nav.navbar .container .collapse ul li:last-child .dropdown-menu {
+    transform: translateX(0%) translateY(5px) !important;
+  }
+  nav.navbar .container .collapse ul li:last-child .dropdown-menu a {
+    padding: 0 !important;
+  }
+}
+@media screen and (max-width: 370.98px) {
+  nav.navbar .container .collapse {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    width: 90%;
+    background: white;
+    border-radius: 10px;
+    transform: translateX(-50%) translateY(0);
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 35px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5019607843);
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+  }
+  nav.navbar .container .collapse.open {
+    max-height: 450px;
+    padding: 10px 35px;
+  }
+  nav.navbar .container .collapse ul {
+    width: 100%;
+  }
+  nav.navbar .container .collapse ul li {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  nav.navbar .container .collapse ul li:last-child {
+    margin-bottom: 0;
+  }
+  nav.navbar .container .collapse ul li:last-child .dropdown-menu {
+    transform: translateX(0%) translateY(5px) !important;
+  }
+  nav.navbar .container .collapse ul li:last-child .dropdown-menu a {
+    padding: 0 !important;
+  }
 }
 
 header {
@@ -347,6 +504,7 @@ header .container .arrow-down-link img:nth-child(3) {
   color: #555;
 }
 .Services .container #Video {
+  scroll-margin-top: 125px;
   max-width: 100%;
   position: relative;
   overflow: hidden;
@@ -618,8 +776,11 @@ header .container .arrow-down-link img:nth-child(3) {
     width: 90% !important;
   }
 }
-.Modal.servicesData .container .body p, .Modal.servicesData .container .body span {
-  color: #555 !important;
+.Modal.servicesData .container .body .description {
+  color: #333;
+}
+.Modal.servicesData .container .body ol h2 {
+  color: black;
 }
 .Modal.openVideo .container {
   margin: 0;

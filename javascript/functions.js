@@ -60,7 +60,7 @@ function showServices(modaName, serviceIndex) {
                 <div class="row mb-5">
                         <div class="col-lg-6">
                                 <div class="item px-3">
-                                        <p class="fs-3 mb-4">${servicesArr[serviceIndex].description}</p>
+                                        <p class="description fs-3 mb-4">${serviceDescription(servicesArr[serviceIndex].description)}</p>
                                 </div>
                         </div>
                         <div class="col-lg-6">
