@@ -18,6 +18,13 @@
                         border-bottom: 1px solid #999;
                         @include display($display: flex, $jc: space-between, $ai: center);
                 }
+
+                @include responsive(450) {
+                        width: 90% !important;
+                }
+                @include responsive(250) {
+                        width: 90% !important;
+                }
         }
 
         &.servicesData {
