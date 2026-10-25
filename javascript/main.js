@@ -26,10 +26,14 @@ navBtn.addEventListener("click", function () {
         }, 500);
 })
 
-window.addEventListener("scroll", function () {
-        if (window.scrollY >= 15) {
-                nav.classList.add("scrolled");
-        } else {
-                nav.classList.remove("scrolled");
-        }
+// window.addEventListener("scroll", function () {
+//         if (window.scrollY >= 15) {
+//                 nav.classList.add("scrolled");
+//         } else {
+//                 nav.classList.remove("scrolled");
+//         }
+// })
+
+$(window).scroll(function () {
+        $(nav).toggleClass("scrolled", window.scrollY >= 15);
 })
