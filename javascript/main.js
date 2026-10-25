@@ -34,6 +34,22 @@ navBtn.addEventListener("click", function () {
 //         }
 // })
 
-$(window).scroll(function () {
+$(window).scroll(function (event) {
         $(nav).toggleClass("scrolled", window.scrollY >= 15);
+
+        let $sections = $('header, section');
+
+        $sections.each(function (index, section) { 
+                let $section = $(section),
+                        sectionID = $section.attr("id"),
+                        sectionTop = $section.offset().top,
+                        sectionBottom = sectionTop + $section.outerHeight(true),
+                        navHeight = $(nav).outerHeight(true),
+                        sY = window.scrollY + navHeight;
+                
+                if (sY >= sectionTop && sY < sectionBottom) {
+                        $('.nav-link.active').removeClass('active');
+                        $(`.nav-link[href='#${sectionID}']`).addClass('active');
+                }
+        });
 })

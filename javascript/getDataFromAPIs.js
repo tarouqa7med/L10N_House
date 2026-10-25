@@ -8,7 +8,7 @@
         for (let service of servicesArr) {
 
                 $("#Services .row").append(`
-                        <div class="myCol col-lg-6 col-md-6 col-sm-12">
+                        <div class="myCol col-lg-6 col-md-6 col-sm-12 wow ${(id % 2 == 0) ? 'animate__backInLeft' : 'animate__backInRight'}" ${(id % 2 == 0) ?'':'data-wow-delay=".2s"'}>
                                 <div class="item px-4 py-4 d-flex flex-column justify-content-center align-items-center">
                                         <img class="img-fluid mb-4" src="./attachments/${service.icon}" alt="">
                                         <p class="title text-black fs-1">${service.title}</p>
@@ -44,8 +44,6 @@
         let response = await fetch("https://semicode.tech/api/v1/l10nhouse/languages");
 
         languagesArr = await response.json();
-
-        console.log(languagesArr[2].languages)
         
         let id = 0;
         for (let sector of languagesArr) {

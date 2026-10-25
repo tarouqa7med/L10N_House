@@ -460,7 +460,6 @@ header .container .arrow-down-link img:nth-child(3) {
 
 .AboutUs {
   background-color: white;
-  scroll-margin-top: 125px;
 }
 .AboutUs .container {
   width: 90%;
@@ -518,9 +517,6 @@ header .container .arrow-down-link img:nth-child(3) {
   width: 60%;
 }
 
-.Services {
-  scroll-margin-top: 125px;
-}
 .Services .container {
   max-width: 100%;
 }
@@ -533,6 +529,11 @@ header .container .arrow-down-link img:nth-child(3) {
   width: fit-content;
 }
 @media screen and (min-width: 371px) and (max-width: 575.98px) {
+  .Services .container > .title {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 370.98px) {
   .Services .container > .title {
     font-size: 30px;
   }
@@ -575,7 +576,7 @@ header .container .arrow-down-link img:nth-child(3) {
   color: #555;
 }
 .Services .container #Video {
-  scroll-margin-top: 125px;
+  scroll-margin-top: 100px;
   max-width: 100%;
   position: relative;
   overflow: hidden;
@@ -596,7 +597,7 @@ header .container .arrow-down-link img:nth-child(3) {
 .Services .container #Video .container {
   max-width: 100%;
 }
-.Services .container #Video .container h2 {
+.Services .container #Video .container .title {
   color: white;
   font-weight: bold;
   font-size: 40px;
@@ -605,11 +606,16 @@ header .container .arrow-down-link img:nth-child(3) {
   width: fit-content;
 }
 @media screen and (min-width: 371px) and (max-width: 575.98px) {
-  .Services .container #Video .container h2 {
+  .Services .container #Video .container .title {
     font-size: 30px;
   }
 }
-.Services .container #Video .container h2::after {
+@media screen and (max-width: 370.98px) {
+  .Services .container #Video .container .title {
+    font-size: 30px;
+  }
+}
+.Services .container #Video .container .title::after {
   content: "";
   position: absolute;
   bottom: -15px;
@@ -624,12 +630,17 @@ header .container .arrow-down-link img:nth-child(3) {
 .Services .container #Video .container button {
   margin-top: 50px !important;
 }
-.Services .container #Video .container button i {
+.Services .container #Video .container button .fa-youtube {
   font-size: 75px;
   transition-duration: 500ms;
 }
-.Services .container #Video .container button i:hover {
+.Services .container #Video .container button .fa-youtube:hover {
   transform: scale(1.2);
+}
+@media screen and (max-width: 370.98px) {
+  .Services .container #Video .container button .fa-youtube {
+    font-size: 50px;
+  }
 }
 .Services .container #Video:hover .container h2::after {
   width: 60%;
@@ -638,9 +649,6 @@ header .container .arrow-down-link img:nth-child(3) {
   width: 60%;
 }
 
-#WhyUs {
-  scroll-margin-top: 125px;
-}
 #WhyUs .container > .title {
   position: relative;
   width: -moz-fit-content;
@@ -651,6 +659,11 @@ header .container .arrow-down-link img:nth-child(3) {
   margin-bottom: 35px !important;
 }
 @media screen and (min-width: 371px) and (max-width: 575.98px) {
+  #WhyUs .container > .title {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 370.98px) {
   #WhyUs .container > .title {
     font-size: 30px;
   }
@@ -753,9 +766,6 @@ header .container .arrow-down-link img:nth-child(3) {
   width: 60%;
 }
 
-.LanguageAndSectorsSection {
-  scroll-margin-top: 125px;
-}
 .LanguageAndSectorsSection > .container {
   max-width: 100%;
 }
@@ -769,6 +779,11 @@ header .container .arrow-down-link img:nth-child(3) {
   width: fit-content;
 }
 @media screen and (min-width: 371px) and (max-width: 575.98px) {
+  .LanguageAndSectorsSection > .container .part .title {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 370.98px) {
   .LanguageAndSectorsSection > .container .part .title {
     font-size: 30px;
   }
@@ -815,6 +830,11 @@ header .container .arrow-down-link img:nth-child(3) {
 .LanguageAndSectorsSection > .container .part.L\&S .container .title::after {
   background-color: white;
 }
+@media screen and (max-width: 370.98px) {
+  .LanguageAndSectorsSection > .container .part.L\&S .container .title {
+    font-size: 30px;
+  }
+}
 .LanguageAndSectorsSection > .container .part.L\&S .container .layout {
   width: -moz-fit-content;
   width: fit-content;
@@ -825,11 +845,35 @@ header .container .arrow-down-link img:nth-child(3) {
 .LanguageAndSectorsSection > .container .part.L\&S .container .layout button:hover {
   transform: translateY(-6px);
 }
+.LanguageAndSectorsSection > .container .part.satisfiedClients img {
+  aspect-ratio: 5/2;
+}
+.LanguageAndSectorsSection > .container .part.satisfiedClients .owl-dots {
+  margin: auto;
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.LanguageAndSectorsSection > .container .part.satisfiedClients .owl-dots .owl-dot {
+  width: 20px;
+  height: 20px;
+  background: color-mix(in srgb, #EE5E00 25%, transparent 75%);
+  border-radius: 50%;
+  transition-duration: 200ms;
+}
+.LanguageAndSectorsSection > .container .part.satisfiedClients .owl-dots .owl-dot:hover {
+  background: color-mix(in srgb, #EE5E00 50%, transparent 50%);
+}
+.LanguageAndSectorsSection > .container .part.satisfiedClients .owl-dots .owl-dot.active {
+  background: #EE5E00;
+}
+
 #ContactUs {
   background: radial-gradient(rgba(104, 183, 3, 0.7333333333), rgba(48, 93, 0, 0.7333333333)), url("./../../../attachments/contact-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  scroll-margin-top: 125px;
 }
 #ContactUs > .container {
   max-width: 95%;
@@ -849,6 +893,11 @@ header .container .arrow-down-link img:nth-child(3) {
   #ContactUs > .container .head .title {
     font-size: 30px;
     margin-bottom: 25px !important;
+  }
+}
+@media screen and (max-width: 370.98px) {
+  #ContactUs > .container .head .title {
+    font-size: 30px;
   }
 }
 #ContactUs > .container .head .title::after {

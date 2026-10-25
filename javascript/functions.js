@@ -114,7 +114,6 @@ function closeLanguages(languages) {
 }
 
 function loadLanguagesLis(langArr) {
-        console.log(langArr)
         let Lis = ``;
         for (let item of langArr) {
                 Lis += `<li class="secondColor fw-medium fs-3"><i class="fa-regular fa-dot-circle me-2"></i><span class="fw-normal">${item}</span></li>`;

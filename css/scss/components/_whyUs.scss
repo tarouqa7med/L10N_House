@@ -2,8 +2,6 @@
 
 #WhyUs {
 
-        scroll-margin-top: 125px;
-
         .container {
 
                 & > .title {
@@ -13,6 +11,9 @@
                         margin-bottom: 35px !important;
 
                         @include responsive(450) {
+                                font-size: 30px;
+                        }
+                        @include responsive(250) {
                                 font-size: 30px;
                         }
         

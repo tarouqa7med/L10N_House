@@ -7,6 +7,9 @@
         <meta name="keywords" content="">
         <meta name="auther" content="Tarouq A7med">
         <link rel="stylesheet" data-type="css-local" href="./css/plugins/animated-headline/style.css">
+        <link rel="stylesheet" data-type="css-local" href="./css/plugins/animate.css/animate.css">
+        <link rel="stylesheet" data-type="css-local" href="./css/plugins/owlCarousel/owl.carousel.min.css">
+        <link rel="stylesheet" data-type="css-local" href="./css/plugins/owlCarousel/owl.theme.default.min.css">
         <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" crossorigin="anonymous">
         <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" crossorigin="anonymous">
         <link rel="stylesheet" data-type="css-local" href="./css/main.css">
@@ -67,7 +70,7 @@
         <header class="vh-100" id="Home">
                 <div class="container d-flex h-100">
                         <div class="row w-100">
-                                <div class="col-lg-6 col-md-10 m-md-auto part1">
+                                <div class="col-lg-6 col-md-10 m-md-auto part1 wow animate__fadeInLeft">
                                         <div class="item d-flex flex-column justify-content-center h-100">
                                                 <h2 class="title mb-1">L10N House</h2>
                                                 <p class="my-8 fs-3">will help you communicate your message</p>
@@ -88,7 +91,7 @@
                                                 </div>
                                         </div>
                                 </div>
-                                <div class="col-lg-6 col-md-10 m-md-auto part2">
+                                <div class="col-lg-6 col-md-10 m-md-auto part2 wow animate__zoomIn">
                                         <div class="item h-100 d-flex">
                                                 <img class="d-block m-auto" src="./attachments/globe-png-39540.png" alt="">
                                         </div>
@@ -104,14 +107,14 @@
 
         <section class="AboutUs py-5" id="AboutUs">
                 <div class="container py-5">
-                        <h2 class="title m-auto">ABOUT US</h2>
+                        <h2 class="title m-auto wow animate__bounceIn" data-wow-duration="1s" >ABOUT US</h2>
                         <div class="row m-auto">
-                                <div class="myCol col-lg-5 mb-4">
+                                <div class="myCol col-lg-5 mb-4 wow animate__zoomIn" data-wow-duration="1s" >
                                         <div class="item">
                                                 <img class="img-fluid rounded-4" src="./attachments/about.png" alt="">
                                         </div>
                                 </div>
-                                <div class="myCol col-lg-7">
+                                <div class="myCol col-lg-7 wow animate__bounceIn" data-wow-duration="1s" >
                                         <div class="item">
                                                 <p class="fs-4">Located in the heart of dynamic Egypt, <span class="fw-medium"><span class="firstColor">L10N</span> <span class="secondColor">House</span></span> is a fast-growing company fully equipped to fulfil your translation
                                                 and localization requirements, whatever the size and scope of your project. Our personalized approach that reflects our
@@ -129,14 +132,14 @@
 
         <section class="Services py-5" id="Services">
                 <div class="container px-0 pt-5">
-                        <h2 class="title m-auto mb-4">Services</h2>
-                        <div class="row row-gap-5 m-auto py-5">
+                        <h2 class="title m-auto mb-4 wow animate__bounceIn" data-wow-duration="1s" >Services</h2>
+                        <div class="row row-gap-5 m-auto py-5 overflow-hidden">
                                 
                         </div>
                         <div class="Video py-5" id="Video">
                                 <div class="container py-5">
-                                        <h2 class="m-auto">WATCH VIDEO</h2>
-                                        <button class="m-auto d-block border-0 bg-transparent" onclick="openModal('openVideo')">
+                                        <h2 class="title m-auto wow animate__bounceIn" data-wow-duration="1s" >WATCH VIDEO</h2>
+                                        <button class="m-auto d-block border-0 bg-transparent wow animate__zoomIn" onclick="openModal('openVideo')">
                                                 <i class="fa-brands fa-youtube text-white"></i>
                                         </button>
                                 </div>
@@ -146,9 +149,9 @@
 
         <section class="WhyUs py-5" id="WhyUs">
                 <div class="container">
-                        <h2 class="title m-auto">WHY US?</h2>
+                        <h2 class="title m-auto wow animate__bounceIn" data-wow-duration="1s" >WHY US?</h2>
                         <div class="row row-gap-5 py-5 m-auto">
-                                <div class="col col-lg-4 col-md-5 col-sm-10 m-auto">
+                                <div class="col col-lg-4 col-md-5 col-sm-10 m-auto wow animate__flipInY">
                                         <div class="item">
                                                 <div class="div w-100 h-100 d-flex flex-column justify-content-end px-5">
                                                         <h4 class="title text-white fw-bold mb-3">The Best</h4>
@@ -157,7 +160,7 @@
                                                 </div>
                                         </div>
                                 </div>
-                                <div class="col col-lg-4 col-md-5 col-sm-10 m-auto">
+                                <div class="col col-lg-4 col-md-5 col-sm-10 m-auto wow animate__flipInY">
                                         <div class="item">
                                                 <div class="div w-100 h-100 d-flex flex-column justify-content-end px-5">
                                                         <h4 class="title text-white fw-bold mb-3">Solutions for all your language challenges</h4>
@@ -167,7 +170,7 @@
                                                 </div>
                                         </div>
                                 </div>
-                                <div class="col col-lg-4 col-md-5 col-sm-10 m-auto">
+                                <div class="col col-lg-4 col-md-5 col-sm-10 m-auto wow animate__flipInY">
                                         <div class="item">
                                                 <div class="div w-100 h-100 d-flex flex-column justify-content-end px-5">
                                                         <h4 class="title text-white fw-bold mb-3">Our highly qualified teams</h4>
@@ -185,22 +188,49 @@
                 <div class="container px-0 pt-5">
                         <div class="part L&S py-5" id="L&S">
                                 <div class="container py-5">
-                                        <h2 class="title m-auto">Languages & Sectors</h2>
+                                        <h2 class="title m-auto wow animate__bounceIn" data-wow-duration="1s" >Languages & Sectors</h2>
                                         <div class="layout d-flex column-gap-5 m-auto">
-                                                <button class="bg-white px-4 py-3 fs-3 m-auto d-block border-0 rounded-4 secondColor" onclick="showSectors('Sectors')">
+                                                <button class="bg-white px-4 py-3 fs-3 m-auto d-block border-0 rounded-4 secondColor wow animate__zoomInLeft" onclick="showSectors('Sectors')">
                                                         Sectors
                                                 </button>
-                                                <button class="bg-white px-4 py-3 fs-3 m-auto d-block border-0 rounded-4 secondColor" onclick="openLanguages('Languages')">
+                                                <button class="bg-white px-4 py-3 fs-3 m-auto d-block border-0 rounded-4 secondColor wow animate__zoomInRight" onclick="openLanguages('Languages')">
                                                         Languages
                                                 </button>
                                         </div>
                                 </div>
                         </div>
+
+<!-- 
+<img class="img-fluid" src="./attachments/clients/ab.jpg" alt="">
+<img class="img-fluid" src="./attachments/clients/amazon.png" alt="">
+<img class="img-fluid" src="./attachments/clients/dell.png" alt="">
+<img class="img-fluid" src="./attachments/clients/discovery.png" alt="">
+<img class="img-fluid" src="./attachments/clients/hotel.png" alt="">
+<img class="img-fluid" src="./attachments/clients/kia.png" alt="">
+<img class="img-fluid" src="./attachments/clients/olympus.jpg" alt="">
+<img class="img-fluid" src="./attachments/clients/pwc.png" alt="">
+<img class="img-fluid" src="./attachments/clients/Siem.png" alt="">
+<img class="img-fluid" src="./attachments/clients/tom.png" alt="">
+<img class="img-fluid" src="./attachments/clients/wd.jpg" alt="">
+<img class="img-fluid" src="./attachments/clients/zebra.png" alt="">
+-->
+
                         <div class="part satisfiedClients py-5" id="satisfiedClients">
                                 <div class="container">
-                                        <h2 class="title m-auto">SATISFIED CLIENTS</h2>
-                                        <div class="layoutImages">
-
+                                        <h2 class="title m-auto wow animate__bounceIn" data-wow-duration="1s" >SATISFIED CLIENTS</h2>
+                                        <div class="owl-carousel">
+                                                <div> <img class="img-fluid" src="./attachments/clients/ab.jpg" alt=""> </div>
+                                                <div> <img class="img-fluid" src="./attachments/clients/amazon.png" alt=""> </div>
+                                                <div> <img class="img-fluid" src="./attachments/clients/dell.png" alt=""> </div>
+                                                <div> <img class="img-fluid" src="./attachments/clients/discovery.png" alt=""> </div>
+                                                <div> <img class="img-fluid" src="./attachments/clients/hotel.png" alt=""> </div>
+                                                <div> <img class="img-fluid" src="./attachments/clients/kia.png" alt=""> </div>
+                                                <div> <img class="img-fluid" src="./attachments/clients/olympus.jpg" alt=""> </div>
+                                                <div> <img class="img-fluid" src="./attachments/clients/pwc.png" alt=""> </div>
+                                                <div> <img class="img-fluid" src="./attachments/clients/Siem.png" alt=""> </div>
+                                                <div> <img class="img-fluid" src="./attachments/clients/tom.png" alt=""> </div>
+                                                <div> <img class="img-fluid" src="./attachments/clients/wd.jpg" alt=""> </div>
+                                                <div> <img class="img-fluid" src="./attachments/clients/zebra.png" alt=""> </div>
                                         </div>
                                 </div>
                         </div>
@@ -210,12 +240,12 @@
         <section class="ContactUs py-5" id="ContactUs">
                 <div class="container py-4">
                         <div class="head mb-5 text-center">
-                                <h2 class="title m-auto">GET IN TOUCH</h2>
-                                <p class="fs-3 fw-medium">For More information, please do not hesitate to contact us.</p>
+                                <h2 class="title m-auto wow animate__bounceIn" data-wow-duration="1s" >GET IN TOUCH</h2>
+                                <p class="fs-3 fw-medium wow animate__bounceIn" data-wow-duration="1s" >For More information, please do not hesitate to contact us.</p>
                         </div>
                         <div class="body">
-                                <div class="row row-gap-5">
-                                        <div class="myCol col-lg-6 col-md-6 col-sm-12">
+                                <div class="row row-gap-5 overflow-hidden">
+                                        <div class="myCol col-lg-6 col-md-6 col-sm-12 wow animate__bounceInLeft" data-wow-duration="1s">
                                                 <div class="item m-auto rounded-3 bg-white">
                                                         <form action="">
                                                                 <div class="row d-block d-sm-flex">
@@ -236,7 +266,7 @@
                                                         </form>
                                                 </div>
                                         </div>
-                                        <div class="myCol col-lg-6 col-md-6 col-sm-12">
+                                        <div class="myCol col-lg-6 col-md-6 col-sm-12 wow animate__bounceInRight" data-wow-duration="1s" >
                                                 <div class="item d-flex justify-content-evenly flex-column m-auto rounded-3 bg-white">
                                                         <div class="div d-flex mb-4">
                                                                 <div class="part1 pe-4 secondColor">
@@ -277,7 +307,7 @@
                 </div>
         </section>
 
-        <footer class="bg-dark py-3 text-white fs-4 text-center">© 2021 <span style="font-weight: bold; letter-spacing: 2px;">SemiCode</span>, Ltd. | All Rights Reserved .</footer>
+        <footer class="bg-dark py-3 text-white fs-4 text-center wow animate__fadeIn">© 2021 <span style="font-weight: bold; letter-spacing: 2px;">SemiCode</span>, Ltd. | All Rights Reserved .</footer>
 
         <div class="Modal servicesData" data-modal-name="servicesData">
                 <div class="container p-0 rounded-4">
@@ -322,8 +352,10 @@
 
         <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="./javascript/plugins/animated-headline/jquery-2.1.1.js"></script>
+        <script src="./javascript/plugins/wow.js/wow.js"></script>
         <script src="./javascript/plugins/animated-headline/main.js"></script>
-        <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="./javascript/plugins/owlCarousel/owl.carousel.min.js"></script>
         <script src="./javascript/getDataFromAPIs.js"></script>
         <script src="./javascript/variables.js"></script>
         <script src="./javascript/functions.js"></script>

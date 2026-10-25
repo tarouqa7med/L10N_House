@@ -2,7 +2,6 @@
 
 .Services {
 
-        scroll-margin-top: 125px;
         .container {
 
                 max-width: 100%;
@@ -17,6 +16,9 @@
                         @include responsive(450) {
                                 font-size: 30px;
                         }
+                        @include responsive(250) {
+                                        font-size: 30px;
+                                }
         
                         &::after {
                                 @include afterElement($btm: -15px, $width: 25%, $height: 4px, $tdur: 500ms, $bg-color: $secondColor);
@@ -60,7 +62,7 @@
 
                 #Video {
 
-                        scroll-margin-top: 125px;
+                        scroll-margin-top: 100px;
                         max-width: 100%;
                         position: relative;
                         overflow: hidden;
@@ -83,7 +85,7 @@
 
                                 max-width: 100%;
 
-                                h2 {
+                                .title {
                                         color: white;
                                         font-weight: bold;
                                         font-size: 40px;
@@ -91,6 +93,9 @@
                                         width: fit-content;
 
                                         @include responsive(450) {
+                                                font-size: 30px;
+                                        }
+                                        @include responsive(250) {
                                                 font-size: 30px;
                                         }
                         
@@ -101,12 +106,16 @@
                                 }
                                 button {
                                         margin-top: 50px !important;
-                                        i {
+                                        .fa-youtube {
                                                 font-size: 75px;
                                                 transition-duration: 500ms;
 
                                                 &:hover {
                                                         transform: scale(1.2);
+                                                }
+
+                                                @include responsive(250) {
+                                                        font-size: 50px;
                                                 }
                                         }
                                 }
