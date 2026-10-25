@@ -13,6 +13,10 @@
                         font-size: 40px;
                         position: relative;
                         width: fit-content;
+
+                        @include responsive(450) {
+                                font-size: 30px;
+                        }
         
                         &::after {
                                 @include afterElement($btm: -15px, $width: 25%, $height: 4px, $tdur: 500ms, $bg-color: $secondColor);
@@ -85,6 +89,10 @@
                                         font-size: 40px;
                                         position: relative;
                                         width: fit-content;
+
+                                        @include responsive(450) {
+                                                font-size: 30px;
+                                        }
                         
                                         &::after {
                                                 @include afterElement($btm: -15px, $width: 25%, $height: 4px, $tdur: 500ms, $bg-color: white);

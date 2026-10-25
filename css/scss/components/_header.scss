@@ -21,6 +21,16 @@ header {
                                 .title {
                                         color: $firstColor;
                                         font-size: 65px;
+
+                                        @include responsive(650) {
+                                                font-size: 45px;
+                                        }
+                                        @include responsive(450) {
+                                                font-size: 35px;
+                                        }
+                                        @include responsive(250) {
+                                                font-size: 35px;
+                                        }
                                 }
 
                                 & > p {
@@ -73,6 +83,19 @@ header {
                                                 font-size: 16px;
                                         }
                                 }
+
+                                @include responsive(850) {
+                                        transform: translateY(75px);
+                                }
+                                @include responsive(650) {
+                                        transform: translateY(50px);
+                                }
+                                @include responsive(450) {
+                                        transform: translateY(35px);
+                                }
+                                @include responsive(250) {
+                                        transform: translateY(35px);
+                                }
                         }
                 }
 
@@ -80,6 +103,19 @@ header {
                         .item {
                                 img {
                                         width: 60%;
+
+                                        @include responsive(850) {
+                                                transform: translateY(-75px);
+                                        }
+                                        @include responsive(650) {
+                                                transform: translateY(-50px);
+                                        }
+                                        @include responsive(450) {
+                                                transform: translateY(-50px);
+                                        }
+                                        @include responsive(250) {
+                                                transform: translateY(-50px);
+                                        }
                                 }
                         }
                 }

@@ -1,0 +1,121 @@
+@use "../abstracts/main" as *;
+
+#ContactUs {
+        background: radial-gradient(#68b703bb,#305d00bb), url("./../../../attachments/contact-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        scroll-margin-top: 125px;
+        & > .container {
+
+                max-width: 95%;
+
+                .head {
+
+                        color: white;
+                        .title {
+                                font-weight: bold;
+                                font-size: 35px;
+                                margin-bottom: 20px !important;
+                                position: relative;
+                                width: fit-content;
+                                
+                                @include responsive(450) {
+                                        font-size: 30px;
+                                        margin-bottom: 25px !important;
+                                }
+                
+                                &::after {
+                                        @include afterElement($btm: -15px, $width: 25%, $height: 4px, $tdur: 500ms, $bg-color: white);
+                                        border-radius: 5px;
+                                }
+                        }
+                }
+
+                .body {
+                        .row {
+                                .myCol {
+                                        .item {
+                                                padding: 25px;
+                                                width: 90%;
+                                                height: 350px;
+                                                font-size: 16px;
+                                        }
+
+                                        &:nth-child(1) {
+                                                .item {
+                                                        form {
+                                                                input, button, textarea {
+                                                                        font-size: 16px;
+                                                                }
+                                                                input {
+                                                                        padding: 6px;
+                                                                }
+                                                                button {
+                                                                        background-color: $secondColor;
+                                                                }
+                                                                textarea {
+                                                                        height: 135px;
+                                                                        resize: none;
+                                                                }
+                                                        }
+                                                }
+
+                                                @include responsive(450) {
+                                                        .item {
+                                                                height: auto;
+                                                        }
+                                                }
+                                                @include responsive(250) {
+                                                        .item {
+                                                                height: auto;
+                                                        }
+                                                }
+                                        }
+
+                                        &:nth-child(2) {
+
+                                                font-size: 16px;
+
+                                                .title, .detail {
+                                                        margin: 0;
+                                                }
+                                                .detail {
+                                                        color: #555;
+                                                }
+
+                                                .social-media {
+                                                        li {
+                                                                width: 40px;
+                                                                height: 40px;
+                                                                border-radius: 50%;
+                                                                
+                                                                a {
+                                                                        width: 100%;
+                                                                        height: 100%;
+                                                                        @include display($display: flex, $jc: center, $ai: center);
+                                                                }
+
+                                                                &:nth-child(1) {
+                                                                        background-color: #0045B5;
+                                                                }
+                                                                &:nth-child(2) {
+                                                                        background-color: #C52661;
+                                                                }
+                                                                &:nth-child(3) {
+                                                                        background-color: #F70000;
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
+
+        &:hover {
+                & .container .head .title::after {
+                        width: 60%;
+                }
+        }
+}

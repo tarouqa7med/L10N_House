@@ -16,6 +16,10 @@
                                 margin-bottom: 50px !important;
                                 position: relative;
                                 width: fit-content;
+
+                                @include responsive(450) {
+                                        font-size: 30px;
+                                }
                 
                                 &::after {
                                         @include afterElement($btm: -15px, $width: 25%, $height: 4px, $tdur: 500ms, $bg-color: $secondColor);
@@ -37,7 +41,7 @@
                                 &::before {
                                         content: "";
                                         @include properities($pos: absolute, $top: 0, $left: 0, $width: 100%, $height: 100vh, $zIndex:-1);
-                                        background: radial-gradient(#68b703dd,#305d00dd), url("./../attachments/video-bg.jpg") fixed;
+                                        background: radial-gradient(#68b703dd,#305d00dd), url("./../attachments/youth.jpg") fixed;
                                         background-position: center;
                                         background-size: cover;
                                         background-repeat: no-repeat;
