@@ -1,6 +1,4 @@
 
-
-
 function serviceDescription(desc) {
 
         let regex = /L10N House/gmi;
