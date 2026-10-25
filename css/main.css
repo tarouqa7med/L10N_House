@@ -1033,6 +1033,9 @@ header .container .arrow-down-link img:nth-child(3) {
   justify-content: space-between;
   align-items: center;
 }
+.Modal .container .head .title, .Modal .container .head i {
+  color: #333;
+}
 @media screen and (min-width: 371px) and (max-width: 575.98px) {
   .Modal .container {
     width: 90% !important;
@@ -1102,6 +1105,7 @@ header .container .arrow-down-link img:nth-child(3) {
 }
 .Modal.Sectors .container .body .row .myCol .item .title {
   width: 90%;
+  color: #333;
   background-color: #dfeee2;
 }
 .Modal.Languages {

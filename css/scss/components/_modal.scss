@@ -17,6 +17,10 @@
                 .head {
                         border-bottom: 1px solid #999;
                         @include display($display: flex, $jc: space-between, $ai: center);
+
+                        .title, i {
+                                color: #333;
+                        }
                 }
 
                 @include responsive(450) {
@@ -91,6 +95,7 @@
 
                                                         .title {
                                                                 width: 90%;
+                                                                color: #333;
                                                                 background-color: #dfeee2;
                                                         }
                                                 }
