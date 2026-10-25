@@ -25,3 +25,12 @@ navBtn.addEventListener("click", function () {
                 navBtn.disabled = false;
         }, 500);
 })
+
+window.addEventListener("scroll", function () {
+        console.log(window.scrollY)
+        if (window.scrollY >= 15) {
+                nav.classList.add("scrolled");
+        } else {
+                nav.classList.remove("scrolled");
+        }
+})

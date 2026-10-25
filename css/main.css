@@ -76,14 +76,13 @@ nav.navbar {
   top: 0;
   width: 100%;
   z-index: 9999;
-}
-nav.navbar.scrolled .navbar-brand img {
-  width: 125px;
+  transition-duration: 500ms;
 }
 nav.navbar .container {
   width: 90%;
 }
 nav.navbar .container .navbar-brand img {
+  transition-duration: 500ms;
   width: 90px;
 }
 nav.navbar .container button.navbar-toggler.clicked {
@@ -288,6 +287,13 @@ nav.navbar .container .collapse .nav-item .dropdown-menu .dropdown-item {
   nav.navbar .container .collapse ul li:last-child .dropdown-menu a {
     padding: 0 !important;
   }
+}
+nav.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.6666666667);
+  backdrop-filter: blur(5px);
+}
+nav.navbar.scrolled .navbar-brand img {
+  width: 125px;
 }
 
 header {

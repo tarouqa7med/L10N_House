@@ -1,18 +1,13 @@
 @use "../abstracts/main" as *;
 
 nav.navbar {
-        @include properities($pos: fixed, $top: 0, $width: 100%, $zIndex: 9999);
-
-        &.scrolled {
-                .navbar-brand img {
-                        width: 125px;
-                }
-        }
+        @include properities($pos: fixed, $top: 0, $width: 100%, $zIndex: 9999, $tdur: 500ms);
 
         & .container {
                 width: 90%;
 
                 .navbar-brand img {
+                        transition-duration: 500ms;
                         width: 90px;
                 }
 
@@ -196,6 +191,14 @@ nav.navbar {
                                         }
                                 }
                         }
+                }
+        }
+
+        &.scrolled {
+                background-color: #ffffffaa;
+                backdrop-filter: blur(5px);
+                .navbar-brand img {
+                        width: 125px;
                 }
         }
 }
