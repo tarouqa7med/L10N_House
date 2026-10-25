@@ -1,11 +1,10 @@
-@use "../abstracts/" as *;
+@use "../abstracts/main" as *;
 
 #WhyUs {
 
         scroll-margin-top: 125px;
 
         .container {
-
 
                 & > .title {
                         @include properities($pos: relative, $width: fit-content, $color: $secondColor);
@@ -36,7 +35,7 @@
                                 }
                                 
                                 .item {
-                                        @include properities($width: 350px, $height: 450px, $pos: relative, $br: 10px, $tdur: 250ms, $bgColor: $secondColor);
+                                        @include properities($pos: relative, $width: 350px, $height: 450px, $br: 10px, $tdur: 250ms, $bgColor: $secondColor);
                                         margin: auto;
                                         
                                         
@@ -56,18 +55,35 @@
 
                                         }
 
-                                        @include responsive(1050) {
-                                                & {
-                                                        width: 280px;
-                                                }
-                                        }
                                         @include responsive(1250) {
-                                                & {
-                                                        width: 300px;
-                                                }
+                                                width: 350px;
+                                                height: 480px;
+                                        }
+                                        @include responsive(1050) {
+                                                width: 300px;
+                                                height: 480px;
+                                        }
+                                        @include responsive(850) {
+                                                width: 300px;
+                                                height: 450px;
+                                        }
+                                        @include responsive(650) {
+                                                width: 300px;
+                                                height: 400px;
+                                        }
+                                        @include responsive(450) {
+                                                width: 300px;
+                                                height: 400px;
+                                        }
+                                        @include responsive(250) {
+                                                width: 280px;
+                                                height: 450px;
                                         }
                                 }
                         }
+                }
+                @include responsive(1050) {
+                        max-width: 100%;
                 }
         }
 

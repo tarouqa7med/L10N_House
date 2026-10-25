@@ -1,0 +1,76 @@
+@use "../abstracts/main" as *;
+
+.LanguageAndSectorsSection {
+
+        scroll-margin-top: 125px;
+        & > .container {
+
+                max-width: 100%;
+
+                .part {
+
+                        & .title {
+                                color: $secondColor;
+                                font-weight: bold;
+                                font-size: 35px;
+                                margin-bottom: 50px !important;
+                                position: relative;
+                                width: fit-content;
+                
+                                &::after {
+                                        @include afterElement($btm: -15px, $width: 25%, $height: 4px, $tdur: 500ms, $bg-color: $secondColor);
+                                        border-radius: 5px;
+                                }
+                        }
+
+                        &:hover {
+                                .title::after {
+                                        width: 60%;
+                                }
+                        }
+
+                        &.L\&S {
+                                max-width: 100%;
+                                position: relative;
+                                overflow: hidden;
+                                
+                                &::before {
+                                        content: "";
+                                        @include properities($pos: absolute, $top: 0, $left: 0, $width: 100%, $height: 100vh, $zIndex:-1);
+                                        background: radial-gradient(#68b703dd,#305d00dd), url("./../attachments/video-bg.jpg") fixed;
+                                        background-position: center;
+                                        background-size: cover;
+                                        background-repeat: no-repeat;
+                                }
+
+                                .container {
+
+                                        max-width: 100%;
+
+                                        .title {
+                                                color: white;
+        
+                                                &::after {
+                                                        background-color: white;
+                                                }
+                                        }
+
+                                        .layout {
+                                                width: fit-content;
+                                                
+                                                button {
+                                                        transition-duration: 350ms;
+                                                        &:hover {
+                                                                transform: translateY(-6px);
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+
+                        &.satisfiedClients {
+
+                        }
+                }
+        }
+}

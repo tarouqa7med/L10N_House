@@ -1,15 +1,152 @@
-@use "../abstracts/" as *;
+@use "../abstracts/main" as *;
 
 .Modal {
-        @include properities($pos: fixed, $top: 0, $left: 0, $width: 100%, $height: 100vh, $bgColor: #00000080, $zIndex: 10000, $tdur: 500ms);
+
+        @include properities($pos: fixed, $top: 0, $left: 0, $width: 100%, $height: 100vh, $bgColor: #00000080, $zIndex: 10000);
         display: none;
         overflow: auto;
 
         .container {
+                position: relative;
                 width: 75%;
                 @include display($display: flex, $jc: center, $ai: center);
                 flex-direction: column;
                 margin-block: 25px;
                 background-color: white;
+
+                .head {
+                        border-bottom: 1px solid #999;
+                        @include display($display: flex, $jc: space-between, $ai: center);
+                }
+        }
+
+        &.servicesData {
+                .container {
+                        .body {
+                                p, span {
+                                        color: #555 !important;
+                                }
+                        }
+                }
+        }
+
+        &.openVideo {
+                .container {
+                        margin: 0;
+                        @include properities($pos: absolute, $top: 50%, $left: 50%, $x: -50%, $y: -50%, $width: 50%, $height: 400px, $br: 12px);
+                        overflow: hidden;
+                        max-width: 760px;
+
+                        @include responsive(250) {
+                                width: 250px;
+                                height: 150px;
+                        }
+                        @include responsive(450) {
+                                width: 320px;
+                                height: 220px;
+                        }
+                        @include responsive(650) {
+                                width: 480px;
+                                height: 325px;
+                        }
+                        @include responsive(850) {
+                                width: 650px;
+                                height: 450px;
+                        }
+
+                        iframe {
+                                width: 100%;
+                                height: 100%;
+                        }
+                }
+        }
+
+        &.Sectors {
+                .container {
+                        width: 100%;
+                        max-width: 80vw !important;
+                        .body {
+                                .row {
+                                        .myCol {
+                                                .item  {
+                                                        width: 100%;
+                                                        background-color: #ebfbee;
+
+                                                        img {
+                                                                width: 65px;
+                                                        }
+
+                                                        .title {
+                                                                width: 90%;
+                                                                background-color: #dfeee2;
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
+
+        &.Languages {
+
+                overflow: hidden;
+
+                .container {
+                        margin: 0;
+                        min-width: 300px;
+                        @include properities($pos: absolute, $top: 0, $right: 0, $x: 100%, $width: 40%, $height: 100%, $bgColor: null, $color: null, $br: 10px 0 0 10px !important, $zIndex: null, $tdur: 500ms);
+                        overflow: auto;
+
+                        &.show {
+                                @include properities($x: 0);
+                        }
+
+                        & > .fa-times {
+                                @include properities($pos: absolute, $top: 20px, $right: 20px, $width: 25px, $height: 20px, $color: white, $br: 5px, $zIndex: 1);
+                                @include display($display: flex, $jc: center, $ai: center);
+                                background-color: #333;
+                        }
+
+                        .body {
+                                margin-top: 35px;
+
+                                .item {
+                                        p {
+                                                position: relative;
+                                                &::before {
+                                                        content: "";
+                                                        @include properities($pos: absolute, $bottom: 0, $width: 85px, $height: 3px);
+                                                }
+                                        }
+
+                                        &:nth-child(odd) {
+                                                p {
+                                                        color: $firstColor;
+                                                        &::before {
+                                                                background: $firstColor;
+                                                        }
+                                                }
+                                                .fa-dot-circle {
+                                                        color: $firstColor;
+                                                }
+                                        }
+                                        &:nth-child(even) {
+                                                p {
+                                                        color: $secondColor;
+                                                        &::before {
+                                                                background: $secondColor;
+                                                        }
+                                                }
+                                                .fa-dot-circle {
+                                                        color: $secondColor;
+                                                }
+                                        }
+                                }
+                                span {
+                                        color: #333;
+                                }
+                        }
+                }
         }
 }
+

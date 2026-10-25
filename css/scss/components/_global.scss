@@ -1,4 +1,4 @@
-@use "../abstracts/" as *;
+@use "../abstracts/main" as *;
 
 html {
         scroll-behavior: smooth;
@@ -18,10 +18,17 @@ body {
                         background: linear-gradient(color-mix(in srgb, $firstColor 70%, black 30%));
                 }
         }
+
+        &.no-scroll {
+                overflow: hidden;
+        }
 }
 .firstColor {
         color: $firstColor;
 }
 .secondColor {
         color: $secondColor;
+}
+.pointer {
+        cursor: pointer;
 }

@@ -1,4 +1,4 @@
-@use "./abstracts/" as *;
+@use "./abstracts/main" as *;
 
 @use "components/global";
 @use "components/navbar";
@@ -6,4 +6,5 @@
 @use "components/aboutUs";
 @use "components/services";
 @use "components/whyUs";
+@use "components/LanguageAndSectorsSection";
 @use "components/modal";

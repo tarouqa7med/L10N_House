@@ -1,4 +1,4 @@
-@use "../abstracts/" as *;
+@use "../abstracts/main" as *;
 
 .AboutUs {
         background-color: white;
@@ -22,11 +22,10 @@
                 .row {
 
                         @include responsive(850) {
-                                & {
-                                        display: block;
-                                }
+                                display: block;
                         }
-                        .col {
+                        
+                        .myCol {
                                 .item {
 
                                         width: 95%;
@@ -35,18 +34,13 @@
                                         }
 
                                         @include responsive(850) {
-                                        & {
                                                 margin: auto;
                                                 width: 90%;
                                         }
                                 }
-                                }
 
                                 @include responsive(850) {
-                                        & {
-                                                width: 100%;
-                                                margin-bottom: 35px;
-                                        }
+                                        width: 100%;
                                 }
                         }
                 }
